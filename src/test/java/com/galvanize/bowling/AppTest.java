@@ -4,5 +4,6 @@
 package com.galvanize.bowling;
 
 public class AppTest {
-
+    public static void main(String[] args) {
+    }
 }
