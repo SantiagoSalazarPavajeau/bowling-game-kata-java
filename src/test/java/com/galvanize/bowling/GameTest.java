@@ -61,25 +61,25 @@ public class GameTest {
 //        assertEquals(expectedRoll, game.getCurrentRoll());// 20 game is over
         assertEquals(expectedScore, game.getScore()); // score is 0
     }
-//
-//    @Test
-//    public void testOneSpareTwoThreesAnd17Gutters(){
-//        Game game = new Game();
-//        int expectedScore = 19;
-//
-//        game.rollTheBall(5);
-//        game.rollTheBall(5);// spare
-//        // spare 2 tries to 10
-//        //      bonus next ball
-//        game.rollTheBall(3);// bonus
-//        game.rollTheBall(3);
-//
-//        for(int i =0; i < 16; i++){
-//            game.rollTheBall(0);
-//        }
-//
-//        assertEquals(expectedScore, game.getScore());
-//    }
+
+    @Test
+    public void testOneSpareTwoThreesAnd17Gutters(){
+        Game game = new Game();
+        int expectedScore = 19;
+
+        game.rollTheBall(5);
+        game.rollTheBall(5);// spare
+        // spare 2 tries to 10
+        //      bonus next ball
+        game.rollTheBall(3);// bonus
+        game.rollTheBall(3);
+
+        for(int i =0; i < 16; i++){
+            game.rollTheBall(0);
+        }
+
+        assertEquals(expectedScore, game.getScore());
+    }
 //
 //    @Test
 //    public void testStrike(){

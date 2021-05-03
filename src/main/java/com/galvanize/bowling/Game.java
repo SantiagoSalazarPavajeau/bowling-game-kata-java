@@ -21,8 +21,13 @@ public class Game {
         int i = 0; // pointer for turn/game
 
         while(i < 10) {
-            totalScore += scores[j] + scores[j + 1];
-            j += 2;
+            if( scores[j] + scores[j+1] == 10){ // spare
+                totalScore += 10 + scores[j+2];
+                j+= 2;
+            }else { // only pins thrown down
+                totalScore += scores[j] + scores[j + 1];
+                j += 2;
+            }
             i++;
         }
 
