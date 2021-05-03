@@ -80,36 +80,36 @@ public class GameTest {
 
         assertEquals(expectedScore, game.getScore());
     }
-//
-//    @Test
-//    public void testStrike(){
-//        Game game = new Game();
-//        int expectedScore = 22;
-//
-//        game.rollTheBall(10);
-//        game.rollTheBall(3);// spare
-//        // spare 2 tries to 10
-//        //      bonus next ball
-//        game.rollTheBall(3);// bonus
-//
-////        for(int i =0; i < 17; i++){
-////            game.rollTheBall(0);
-////        }
-//
-//        assertEquals(expectedScore, game.getScore());
-//    }
-//
-//    @Test
-//    public void testAllStrike(){
-//        Game game = new Game();
-//        int expectedScore = 300;
-//
-//        for(int i =0; i < 20; i++){
-//            game.rollTheBall(10);
+
+    @Test
+    public void testStrike(){
+        Game game = new Game();
+        int expectedScore = 22;
+
+        game.rollTheBall(10);
+        game.rollTheBall(3);// spare
+        // spare 2 tries to 10
+        //      bonus next ball
+        game.rollTheBall(3);// bonus
+
+//        for(int i =0; i < 17; i++){
+//            game.rollTheBall(0);
 //        }
-//
-//        assertEquals(expectedScore, game.getScore());
-//    }
+
+        assertEquals(expectedScore, game.getScore());
+    }
+
+    @Test
+    public void testAllStrike(){
+        Game game = new Game();
+        int expectedScore = 300;
+
+        for(int i =0; i < 20; i++){
+            game.rollTheBall(10);
+        }
+
+        assertEquals(expectedScore, game.getScore());
+    }
 
 
 
