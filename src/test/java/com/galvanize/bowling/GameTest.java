@@ -22,45 +22,45 @@ public class GameTest {
         assertEquals(expectedScore, actualScore);
     }
 
-//    @Test
-//    public void testRollingBall(){
-//        Game game = new Game();
-//        int expectedRoll = 3;
-//
-//        game.rollTheBall(2); // +1
-//        game.rollTheBall(5);// +1
-//        game.rollTheBall(5);// +1
-//
-//        assertEquals(expectedRoll, game.getCurrentRoll());
-//    }
-//
-//    @Test
-//    public void testAllGutters(){
-//        Game game = new Game();
-//        int expectedScore = 0;
-//        int expectedRoll = 20;
-//
-//        for(int i =0; i < expectedRoll; i++){
-//            game.rollTheBall(0);
-//        }
-//
+    @Test
+    public void testRollingBall(){
+        Game game = new Game();
+        int expectedRoll = 3;
+
+        game.rollTheBall(2); // +1
+        game.rollTheBall(5);// +1
+        game.rollTheBall(5);// +1
+
+        assertEquals(expectedRoll, game.getCurrentRoll());
+    }
+
+    @Test
+    public void testAllGutters(){
+        Game game = new Game();
+        int expectedScore = 0;
+        int expectedRoll = 20;
+
+        for(int i =0; i < expectedRoll; i++){
+            game.rollTheBall(0);
+        }
+
+        assertEquals(expectedRoll, game.getCurrentRoll());// 20 game is over
+        assertEquals(expectedScore, game.getScore()); // score is 0
+    }
+
+    @Test
+    public void testAllOnes(){
+        Game game = new Game();
+        int expectedScore = 20;
+        int expectedRoll = 20;
+
+        for(int i =0; i < expectedRoll; i++){
+            game.rollTheBall(1);
+        }
+
 //        assertEquals(expectedRoll, game.getCurrentRoll());// 20 game is over
-//        assertEquals(expectedScore, game.getScore()); // score is 0
-//    }
-//
-//    @Test
-//    public void testAllOnes(){
-//        Game game = new Game();
-//        int expectedScore = 20;
-//        int expectedRoll = 20;
-//
-//        for(int i =0; i < expectedRoll; i++){
-//            game.rollTheBall(1);
-//        }
-//
-////        assertEquals(expectedRoll, game.getCurrentRoll());// 20 game is over
-//        assertEquals(expectedScore, game.getScore()); // score is 0
-//    }
+        assertEquals(expectedScore, game.getScore()); // score is 0
+    }
 //
 //    @Test
 //    public void testOneSpareTwoThreesAnd17Gutters(){
